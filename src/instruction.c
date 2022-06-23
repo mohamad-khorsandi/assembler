@@ -10,7 +10,7 @@ void constructor(char*, char*, char*, char*, int);
 instructoin* inst_list;
 int no_inst;
 
-char inst_name_list[15][5]={"add", "sub", "slt", "or", "nand", "addi", "slti", "ori", "lui", "lw", "sw", "beq", "jlar", "j", "halt"};
+char inst_name_list[15][5]={"add", "sub", "slt", "or", "nand", "addi", "slti", "ori", "lui", "lw", "sw", "beq", "jalr", "j", "halt"};
 
 void make_instruction_list(){
     fill_data_seg();
@@ -151,7 +151,7 @@ void fill_txt_seg(){
         switch(inst->type){
             case R:
                 dec_inst = inst->rd*pow(2,12) + inst->rt*pow(2,16)
-                         + inst->rs*pow(2,20) + inst->opcode*pow(2,28);
+                         + inst->rs*pow(2,20) + inst->opcode*pow(2,24);
             break;
 
             case I:

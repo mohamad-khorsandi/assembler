@@ -1,0 +1,8 @@
+*
+!src/
+!*.c
+!*.h
+!.gitignore
+!io-err/
+!io/
+!*.as
