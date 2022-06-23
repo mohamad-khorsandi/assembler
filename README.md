@@ -13,4 +13,5 @@ gcc main.c symbol_table.c instruction.c -o assmbler
 ./assmbler input output
 ```
 use test cases in io/ dir as input.
-also this assmbler ditects some errors(test cases in io-err/ produce error).
+
+also this assmbler detectes some errors(test cases in io-err/ produce error).
